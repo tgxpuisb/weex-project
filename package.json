@@ -1,0 +1,31 @@
+{
+  "name": "weex-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config ./build/webpack.weex.prod.js --color",
+    "dev": "webpack-dev-server --config ./build/webpack.weex.dev.js --watch --host 0.0.0.0 --inline=false"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://git.husor.com/hxlib/weex-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-runtime": "^6.26.0",
+    "css-loader": "^0.28.8",
+    "glob": "^7.1.2",
+    "ip": "^1.1.5",
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
+    "style-loader": "^0.19.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.0",
+    "webpack-merge": "^4.1.1",
+    "weex-loader": "^0.6.9"
+  }
+}

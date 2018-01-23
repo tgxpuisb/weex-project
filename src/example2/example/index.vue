@@ -1,5 +1,5 @@
 <template>
-    <div class="hello"><text>hello test12</text></div>
+    <div class="hello"><text>hello test12</text><text>这是一个测试2</text></div>
 </template>
 <style>
     .hello {

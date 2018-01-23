@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>weex页面总览</title>
+    <script src="/web-resource/qrcode.js"></script>
+    <style>
+        .header {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="header">当前一共监听了<%=Object.keys(entries).length%>张weex页面</h2>
+    <% for (var key in entries) {%>
+        <div class="item">
+            <a href="/weex-resource/<%= key %>.js"></a>
+        </div>
+        <div><%=key%></div>
+        <a href="">预览web版本</a>
+    <% } %>
+    <script>
+        [].forEach.call(document.querySelectorAll('.item a'), item => {
+            let url = item.href
+            url += '?_wx_tpl=' + url + '&wh_weex=true'
+            let QR = qrcode(0, 'L')
+            console.log(url)
+            QR.addData(url)
+            QR.make()
+            item.innerHTML = QR.createImgTag(6, 12)
+        })
+    </script>
+</body>
+</html>

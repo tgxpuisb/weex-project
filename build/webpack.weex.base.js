@@ -5,7 +5,7 @@ module.exports = {
     entry: getEntries('./src/**/index.js'),
     output: {
         path: path.join(__dirname, '../dist/'),
-        filename: 'weex/[name].js'
+        filename: '[name].js'
     },
     module: {
         rules: [

@@ -22,8 +22,4 @@ const weexConfig = merge(config, {
     ]
 })
 
-console.log(ip)
-
-
-
 module.exports = weexConfig
